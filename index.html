@@ -4,11 +4,12 @@
   <head>
     <meta charset="utf-8">
     <title>Crie sua Conta do Hello Pizza</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
   <body>
-    <form method="GET" action=""> 
+    <form method="POST" action="">
       <h2>Crie sua Conta do Hello Pizza</h2>
       <div>
         <fieldset>
@@ -43,7 +44,10 @@
             <label>Data de nascimento:</label>
             <input type="date" name="data" required />
           </div>
-         
+          <div>
+            <label>Foto de perfil:</label>
+            <input type="file" accept="image/*" />
+          </div>
         </fieldset>
         <fieldset>
             <legend>Endereço:</legend>
@@ -97,7 +101,20 @@
               </select>
             </div>
         </fieldset>
-         </form>
+        <fieldset>
+          <legend>Anuncio:</legend>
+          <div>
+            <label>Como conheceu o HelloPizza:</label>
+            <textarea placeholder="Conte a sua historia e diga para a gente como conheceu a melhor pizzaria do brasil" name="adicional" rows="10" cols="20"></textarea>
+          </div>
+          <div>
+            <input type="checkbox" name="utilizou" value="sim" checked>
+            <label>Desejo receber ofertas por e-mail</label>
+          </div>
+        </fieldset>
+      </div>
+      <input type="submit" value="Finalizar cadastro" />
+    </form>
   </body>
 
 </html>
